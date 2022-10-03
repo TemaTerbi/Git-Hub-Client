@@ -8,13 +8,7 @@
 import UIKit
 import WebKit
 
-protocol LoginPageOauthDelegate: AnyObject {
-    func handleTokenChanged(token: String)
-}
-
 final class LoginPageOauth: UIViewController {
-    
-    weak var delegate: LoginPageOauthDelegate?
     
     private let webView = WKWebView()
     private let clientId = "17bdb8071f045ddcbda8"
@@ -62,7 +56,6 @@ extension LoginPageOauth: WKNavigationDelegate {
                 let token = components.queryItems?.first(where: { $0.name == "code"})?.value
                 
                 if let token = token {
-//                    delegate?.handleTokenChanged(token: token)
                     UserDefaults.standard.set(token, forKey: "UserAuthCode")
                 }
                 

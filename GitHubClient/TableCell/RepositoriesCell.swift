@@ -51,5 +51,4 @@ class RepositoriesCell: UITableViewCell {
     func setupData(_ data: Repositories) {
         lableNameRepo.text = data.name
     }
-    
 }

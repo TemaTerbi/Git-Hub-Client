@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func setupWindow(scene: UIScene) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let controller = ViewController()
+        let controller = LoginPageOauth()
         window?.rootViewController = controller
         window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()

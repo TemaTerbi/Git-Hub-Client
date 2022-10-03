@@ -28,6 +28,7 @@ final class ViewController: UIViewController {
         self.view.backgroundColor = .white
         addSubView()
         setupConstraints()
+        login()
     }
     
     //MARK: - Private Methodts
